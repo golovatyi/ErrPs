@@ -52,14 +52,14 @@ public class ACh extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(emul, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Calibration, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+            .addComponent(Calibration, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Calibration, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emul, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))
+                .addComponent(emul, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
         );
 
         bindingGroup.bind();
@@ -68,9 +68,9 @@ public class ACh extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CalibrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalibrationActionPerformed
-        String a[] = new String[1];
-        SetUp(a);
-        
+
+        FCh f = new FCh();
+        f.setVisible(true);
     }//GEN-LAST:event_CalibrationActionPerformed
 
     /**

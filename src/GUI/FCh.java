@@ -17,7 +17,7 @@ public class FCh extends javax.swing.JFrame {
      * Creates new form FCh
      */
     String file;
-    
+    String[] launch = new String[1];
     
     public FCh() {
         initComponents();
@@ -58,11 +58,21 @@ public class FCh extends javax.swing.JFrame {
 
     private void FChActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FChActionPerformed
         switch(evt.getActionCommand()){
-            case "ApproveSelecrion":
+            case "ApproveSelection":
                 file = FCh.getName(FCh.getSelectedFile());
+                System.out.print(file);
+                try{
+                    SetUp su = new practice.SetUp(file);
+                    SetUp.main(launch);
+                    System.out.print('0');
+                } catch(IOException ex){
+                    System.out.print('1');
+                }
                 
+                
+                FCh.setVisible(false);  
             case "CancelSelection":
-          
+                FCh.setVisible(false);  
             default:
                 FCh.setVisible(false);   
         }        

@@ -46,7 +46,7 @@ public class SetUp {
      
     public SetUp(String i1) throws IOException{
             
-            this.file = i1;
+            SetUp.file = i1;
             //String args[] = new String[1];
             //main(args);
             //SetUp.example = i2;
