@@ -4,6 +4,6 @@ This is some sort of soft, which is firstly gathering collected data, then emula
 ErrPs/src/practice/SetUp.java  - calibration.
 ErrPs/src/emulation/IO.java - input/patterncatch emulation.
 
-GUI is a bit raw, cause developing right now.
+GUI is a bit raw, cause it's developing right now.
 
 Used IDE - Netbeans 8.2
