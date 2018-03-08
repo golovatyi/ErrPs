@@ -17,11 +17,13 @@ public class IO {
     
     static String file = "Wrkmod.TXT";
     static String minmax = "Calibration.prc";
-    static SetUp SU = new SetUp(file);
+    static SetUp SU;
+
     static SearchERRPS SE = new SearchERRPS();
     //static long begin = System.currentTimeMillis();
     
     public static void main(String args[]) throws IOException, InterruptedException {
+        SU = new SetUp(file);
         SE.Compare("Calibration.prc", "Wrkmod.TXT");
     }
     

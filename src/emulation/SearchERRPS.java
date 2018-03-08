@@ -7,17 +7,18 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
-public class SearchERRPS {
+public class SearchERRPS  {
     double[][] pe, in;
     int i, j, co, strengh;
     int rp, cp, ri, ci;
     static String file = "Wrkmod.TXT";
     static String example = "Calibration.prc";
     static CalibrationMethods CM = new CalibrationMethods();
-    static SetUp SU = new SetUp(file);
+    static SetUp SU;
     
     
     public void setData(String pattern, String input) throws IOException {
+        SU = new SetUp(file);
         this.pe = CM.ArraySetup(pattern); //22*3   
         this.in = CM.ArraySetup(input);
         

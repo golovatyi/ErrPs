@@ -20,8 +20,8 @@ public class SetUp {
      * @throws java.io.IOException
      */
     
-    static String file = "Wrkmod.TXT";;
-    static String example = "Calibration.prc";;
+    static String file = "Wrkmod.TXT";
+    static String example = "Calibration.prc";
     
     
     public static void main(String args[]) throws IOException {
@@ -44,9 +44,11 @@ public class SetUp {
         m.fOut(m.amm, example);
     }
      
-    public SetUp(String i1){
+    public SetUp(String i1) throws IOException{
             
-            SetUp.file = i1;
+            this.file = i1;
+            //String args[] = new String[1];
+            //main(args);
             //SetUp.example = i2;
         }
 }   
