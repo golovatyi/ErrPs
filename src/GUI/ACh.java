@@ -13,6 +13,8 @@ import emulation.*;
  */
 public class ACh extends javax.swing.JFrame {
 
+    
+    
     /**
      * Creates new form ACh
      */
@@ -68,7 +70,7 @@ public class ACh extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CalibrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalibrationActionPerformed
-
+        //todo: перенести FCh из формы в панель
         FCh f = new FCh();
         f.setVisible(true);
     }//GEN-LAST:event_CalibrationActionPerformed

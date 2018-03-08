@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import java.awt.image.ImageObserver;
 import practice.*;
 import java.io.*;
 /**
@@ -35,6 +36,11 @@ public class FCh extends javax.swing.JFrame {
         FCh = new javax.swing.JFileChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                formComponentHidden(evt);
+            }
+        });
 
         FCh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,11 +52,15 @@ public class FCh extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(FCh, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(FCh, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 115, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(FCh, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(FCh, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 92, Short.MAX_VALUE))
         );
 
         pack();
@@ -60,23 +70,25 @@ public class FCh extends javax.swing.JFrame {
         switch(evt.getActionCommand()){
             case "ApproveSelection":
                 file = FCh.getName(FCh.getSelectedFile());
-                System.out.print(file);
                 try{
-                    SetUp su = new practice.SetUp(file);
+                    SetUp su = new practice.SetUp(file);    
                     SetUp.main(launch);
                     System.out.print('0');
+                    System.exit(0); 
                 } catch(IOException ex){
                     System.out.print('1');
                 }
-                
-                
-                FCh.setVisible(false);  
+                System.exit(0);  
             case "CancelSelection":
-                FCh.setVisible(false);  
+                System.exit(0);   
             default:
-                FCh.setVisible(false);   
+                System.exit(0);     
         }        
     }//GEN-LAST:event_FChActionPerformed
+
+    private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+
+    }//GEN-LAST:event_formComponentHidden
 
     
     /**
@@ -107,10 +119,8 @@ public class FCh extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FCh().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new FCh().setVisible(true);
         });
     }
 
