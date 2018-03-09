@@ -55,6 +55,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x438;&#x442;&#x44c; &#x44d;&#x43c;&#x443;&#x43b;&#x44f;&#x446;&#x438;&#x44e;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emulActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

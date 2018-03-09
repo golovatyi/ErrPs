@@ -27,8 +27,7 @@ public class IO {
         SE.Compare("Calibration.prc", "Wrkmod.TXT");
     }
     
-    public IO(String i1, String i2){
-        this.minmax = i1;
+    public IO(String i2){
         this.file = i2;
     }
 }

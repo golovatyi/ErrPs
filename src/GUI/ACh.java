@@ -48,6 +48,11 @@ public class ACh extends javax.swing.JFrame {
         });
 
         emul.setText("Выполнить эмуляцию");
+        emul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emulActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,6 +79,11 @@ public class ACh extends javax.swing.JFrame {
         FCh f = new FCh();
         f.setVisible(true);
     }//GEN-LAST:event_CalibrationActionPerformed
+
+    private void emulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emulActionPerformed
+        // TODO add your handling code here:
+       // IO io = new emulation.IO();
+    }//GEN-LAST:event_emulActionPerformed
 
     /**
      * @param args the command line arguments
