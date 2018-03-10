@@ -164,7 +164,6 @@ public class CalibrationMethods {
     }
 
     public void fOut(double[][] arr, String destination) throws IOException {
-        System.out.println("fOut called");
         int row, col;
         StringBuilder sb = new StringBuilder();
         char a = 0x0a;
