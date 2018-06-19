@@ -5,20 +5,16 @@
  */
 package GUI;
 
+import calibration.SetUp;
 import java.awt.image.ImageObserver;
-import practice.*;
 import java.io.*;
-/**
- *
- * @author rootsu
- */
+
 public class FCh extends javax.swing.JFrame {
 
     /**
      * Creates new form FCh
      */
     String file;
-    String[] launch = new String[1];
     
     public FCh() {
         initComponents();
@@ -71,9 +67,9 @@ public class FCh extends javax.swing.JFrame {
             case "ApproveSelection":
                 file = FCh.getName(FCh.getSelectedFile());
                 try{
-                    SetUp su = new practice.SetUp(file);    
-                    SetUp.main(launch);
-                    System.out.print('0');
+                    SetUp su = new calibration.SetUp(file);    
+                    SetUp.calibrate();
+                    System.out.println('0');
                     System.exit(0); 
                 } catch(IOException ex){
                     System.out.print('1');

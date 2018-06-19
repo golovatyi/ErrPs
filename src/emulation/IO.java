@@ -6,10 +6,11 @@
  * графиком из программы mitsar.
  */
 package emulation;
+import calibration.SetUp;
+import calibration.CalibrationMethods;
 import java.io.*;
 import java.util.*;
 import java.lang.*;
-import practice.*;
 
 
 public class IO {
