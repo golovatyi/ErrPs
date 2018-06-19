@@ -81,8 +81,7 @@ public class ACh extends javax.swing.JFrame {
     }//GEN-LAST:event_CalibrationActionPerformed
 
     private void emulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emulActionPerformed
-        // TODO add your handling code here:
-       // IO io = new emulation.IO();
+       IO.main(new String[]{});
     }//GEN-LAST:event_emulActionPerformed
 
     /**

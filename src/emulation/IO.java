@@ -22,13 +22,23 @@ public class IO {
     static SearchERRPS SE = new SearchERRPS();
     //static long begin = System.currentTimeMillis();
     
-    public static void main(String args[]) throws IOException, InterruptedException {
-        SU = new SetUp(file);
-        SE.Compare("Calibration.prc", "Wrkmod.TXT");
+    public static void main(String args[]) {
+        try {
+            SU = new SetUp(file);
+            SE.Compare("Calibration.prc", "Wrkmod.TXT");
+        } catch (InterruptedException e) {
+            System.err.println("something went wrong: " + e);
+        } catch (IOException e) {
+            System.err.printf("One of the files, either %s or %s not found",
+                    file, minmax);
+        }   
     }
-    
+   
     public IO(String i2){
         this.file = i2;
+    }
+    public IO() {
+        
     }
 }
 
