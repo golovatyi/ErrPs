@@ -4,7 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/babazoya/NetBeansProjects/ErrPs/src/GUI/ACh.java</file>
+            <file>file:/home/babazoya/NetBeansProjects/ErrPs/src/emulation/IO.java</file>
+            <file>file:/home/babazoya/NetBeansProjects/ErrPs/test/practice/SetUpTest.java</file>
+            <file>file:/home/babazoya/NetBeansProjects/ErrPs/src/calibration/CalibrationMethods.java</file>
+            <file>file:/home/babazoya/NetBeansProjects/ErrPs/src/GUI/FChpl.java</file>
             <file>file:/home/babazoya/NetBeansProjects/ErrPs/src/GUI/FCh.java</file>
+            <file>file:/home/babazoya/NetBeansProjects/ErrPs/src/calibration/SetUp.java</file>
         </group>
     </open-files>
 </project-private>

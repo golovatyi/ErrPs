@@ -7,8 +7,6 @@
 
 package calibration;
 import java.io.*;
-import java.util.*;
-import java.lang.*;
 
 
 public class SetUp {
@@ -23,8 +21,6 @@ public class SetUp {
     
     
     public static void calibrate() throws IOException {
-       
-        
         double[][] data, max, min;
         CalibrationMethods m = new CalibrationMethods(); 
         data = m.ArraySetup(file); //записываем файл в массив
@@ -38,6 +34,8 @@ public class SetUp {
     public SetUp(String i1) throws IOException{
         this.file = i1;
     }
+    
+    public SetUp(){};
 }   
     
 

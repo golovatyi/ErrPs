@@ -1,7 +1,6 @@
 package calibration;
 import java.io.*;
 import java.util.*;
-import java.lang.*;
 
 
 public class CalibrationMethods {
@@ -12,9 +11,8 @@ public class CalibrationMethods {
     double[][] amm;
     
     //открытие и закрытие файла
-    public Scanner fOpen(String name) throws IOException{
-        file = new Scanner (new File(name));
-        return file;
+    public void fOpen(String name) throws IOException{
+        this.file = new Scanner (new File(name));
     }
     public void fClose(Scanner var) throws IOException{
     var.close();
@@ -31,7 +29,7 @@ public class CalibrationMethods {
     //работа с входным массивом
     public int CountRows(String name) throws IOException{
         i = 0;
-        file = fOpen(name);
+        fOpen(name);
         while(file.hasNextLine()){
             ++i;
             file.nextLine();   
@@ -42,7 +40,7 @@ public class CalibrationMethods {
     
     public int Countdoubles(String name) throws IOException{
         j = 0;
-        file = fOpen(name);
+        fOpen(name);
         while(file.hasNextDouble()){
             ++j;
             file.nextDouble();
@@ -61,7 +59,7 @@ public class CalibrationMethods {
     public double[][] ArraySetup(String name) throws IOException{
         int row = CountRows(name);
         int col = CountCols(name);
-        file = fOpen(name);
+        fOpen(name);
         data = new double[row][col];
         for(i = 0; i < row; i++){
             for(j = 0; j< col; j++){
@@ -75,28 +73,23 @@ public class CalibrationMethods {
     
     
     public void ArrayPrint(double[][] arr){
-        int row, col;
-        row = arr.length;
-        col = arr[0].length;
-        for(i = 0; i<row; i++){
-            for (j = 0; j<col; j++){
-                System.out.print(arr[i][j] + "  ");
-            }
-            System.out.println(' ');
-        }
-       }
-    /** написать комментарии */
-    public void OneDimPr(double[] arr){
         int row;
         row = arr.length;
-        
         for(i = 0; i<row; i++){
-            
-            System.out.print(arr[i] + "  ");
-            
+            ArrayPrint(arr[i]);
             System.out.println(' ');
         }
        }
+
+    public void ArrayPrint(double[] arr){
+//        int row;
+//        row = arr.length;    
+//        for(i = 0; i<row; i++){         
+//            System.out.print(arr[i] + "  ");         
+//            System.out.println(' ');
+//        }
+        System.out.println(Arrays.asList(arr));
+    }
 //    double[][] = CountMax(data[i][j]){находим среднее максимальное значение за каждые 0,2 с (50 рядов) для каждого датчика}
     public double[][] CountMinimax(double[][] var, String act){
         nij();
@@ -112,13 +105,11 @@ public class CalibrationMethods {
         min = new double[mr][datch];
         
         double[][] res;
-        mx = -999999999999.;
-        mn = 999999999999.;              ;
+        mx = Double.MIN_VALUE;
+        mn = Double.MAX_VALUE;
          //датчики 
         for(i = 0; i<datch; i++){    
-          for(j = 0; j<raw; j++){ //ряды
-//             System.out.println(i); 
-//             System.out.println(j);
+          for(j = 0; j<raw; j++){
              mx = (in[j][i] > mx) ? in[j][i] : mx;
              mn = (in[j][i] < mn) ? in[j][i] : mn; 
              if((j+1)%50==0){
@@ -134,9 +125,7 @@ public class CalibrationMethods {
     }
 
     public double[][] AvMinMax(double in1[][], double in2[][]){
-    //здесь будет запись среднего мини/максимального в файл double[3][22]
-    //необходимо проверить, отличается ли минимакс от исх.средн более чем
-    //в 3 раза
+
         int raw = in1.length;
         int datch = in1[0].length;
         double counter = 0;
@@ -203,10 +192,6 @@ public class CalibrationMethods {
         
         
         
-    }
-    
-    /**     Пустой конструктор.     */
-    public CalibrationMethods(){
     }
 }
 

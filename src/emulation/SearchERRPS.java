@@ -39,9 +39,9 @@ public class SearchERRPS  {
                 if((in[i][j] > pe[j][1])||(in[i][j] < pe[j][2])){ 
                     ++strengh; 
                     if((co != i/250)&&(strengh > 100)){
-                    this.co = i/250;    
-                    System.out.println("pattern registered at " + co + "s with strengh " + strengh);
-                    ++count;
+                        this.co = i/250;    
+                        System.out.println("pattern registered at " + co + "s with strengh " + strengh);
+                        ++count;
                     }       
                 }else{
                     strengh = 0;
@@ -55,6 +55,5 @@ public class SearchERRPS  {
     
     
     public SearchERRPS(){
-//        this.d = d;
     }
 }

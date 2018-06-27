@@ -9,8 +9,6 @@ package emulation;
 import calibration.SetUp;
 import calibration.CalibrationMethods;
 import java.io.*;
-import java.util.*;
-import java.lang.*;
 
 
 public class IO {
@@ -21,9 +19,9 @@ public class IO {
     static SetUp SU;
 
     static SearchERRPS SE = new SearchERRPS();
-    //static long begin = System.currentTimeMillis();
+
     
-    public static void main(String args[]) {
+    public static void launchEmulation() {
         try {
             SU = new SetUp(file);
             SE.Compare("Calibration.prc", "Wrkmod.TXT");
